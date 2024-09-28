@@ -1,0 +1,38 @@
+{
+    "version": "2.0.0",
+    "tasks":
+    [
+        {
+            "label": "C/C++: clang++",
+            "detail": "Compile El Arcano | MacOs",
+            "type": "shell",
+            "command": "clang++",
+            "args":
+            [
+                "-stdlib=libc++",
+                "-std=c++14",
+                "-std=c++17",
+                "-Wall",
+                "-Wextra",
+                "-pedantic",
+                "-pedantic-errors",
+                "-g",
+                "${fileDirname}/main.cpp",
+                "${fileDirname}/entities/*.cpp",
+                "-o",
+                "${fileDirname}/../build/${fileBasenameNoExtension}",
+                "-framework",
+                "ApplicationServices"
+            ],
+            "problemMatcher":
+            [
+                "$gcc"
+            ],
+            "group":
+            {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
