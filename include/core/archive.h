@@ -76,13 +76,13 @@ class Archive
         int i = 0;
         Type reg = read(i);
 
-        while (reg.getId() != id && i < getRegistersQuantity())
+        while (reg.getId() != id && i < countRegisters())
         {
             i++;
             reg = read(i);
         }
 
-        if (i == getRegistersQuantity())
+        if (i == countRegisters())
         {
             return -1;
         }
@@ -90,7 +90,7 @@ class Archive
         return i;
     }
 
-    int getRegistersQuantity()
+    int countRegisters()
     {
         FILE *file_pointer = fopen(getPath().c_str(), "rb");
 
