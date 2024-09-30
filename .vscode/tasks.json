@@ -4,7 +4,7 @@
     [
         {
             "label": "C/C++: clang++",
-            "detail": "Compile El Arcano | MacOs",
+            "detail": "Compile | MacOs | El Arcano",
             "type": "shell",
             "command": "clang++",
             "args":
@@ -32,6 +32,32 @@
             {
                 "kind": "build",
                 "isDefault": true
+            }
+        },
+        {
+            "label": "C/C++: g++.exe",
+            "detail": "Compile | Windows | El Arcano",
+            "type": "shell",
+            "command": "g++.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-std=c++17",
+                "-Wall",
+                "-Wextra",
+                "-pedantic",
+                "${fileDirname}\\main.cpp",
+                "${fileDirname}\\entities\\*.cpp",
+                "-o",
+                "${fileDirname}\\..\\build\\${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build"
             }
         }
     ]
