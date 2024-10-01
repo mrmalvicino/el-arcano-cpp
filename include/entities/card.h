@@ -4,11 +4,11 @@
 #include <cstring>
 #include "effect.h"
 
-class TarotCard
+class Card
 {
     public:
 
-    TarotCard();
+    Card();
 
     int getId();
 
@@ -24,11 +24,9 @@ class TarotCard
 
     private:
 
-    static const int SIZE = 30;
-
     int _id;
 
-    char _name[SIZE];
+    char _name[30];
 
     Effect _effect;
 };

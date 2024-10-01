@@ -1,7 +1,7 @@
 #include "./../include/core/archive.h"
 #include "./../include/entities/crystal.h"
 #include "./../include/entities/effect.h"
-#include "./../include/entities/tarotCard.h"
+#include "./../include/entities/card.h"
 #include "./../include/entities/prophecy.h"
 
 void generateCrystalsData()
@@ -84,42 +84,42 @@ void generateEffectsData()
     effectsArchive.write(effect);
 }
 
-void generateTarotCardsData()
+void generateCardsData()
 {
     Archive<Effect> effectsArchive("data/effects.dat");
-    Archive<TarotCard> tarotCardsArchive("data/tarot_cards.dat");
-    tarotCardsArchive.createEmptyArchive();
-    TarotCard tarotCard;
+    Archive<Card> cardsArchive("data/cards.dat");
+    cardsArchive.createEmptyArchive();
+    Card card;
 
-    tarotCard.setId(1);
-    tarotCard.setName("El diablo");
-    tarotCard.setEffect(effectsArchive.read(0));
-    tarotCardsArchive.write(tarotCard);
+    card.setId(1);
+    card.setName("El diablo");
+    card.setEffect(effectsArchive.read(0));
+    cardsArchive.write(card);
 
-    tarotCard.setId(2);
-    tarotCard.setName("El loco");
-    tarotCard.setEffect(effectsArchive.read(1));
-    tarotCardsArchive.write(tarotCard);
+    card.setId(2);
+    card.setName("El loco");
+    card.setEffect(effectsArchive.read(1));
+    cardsArchive.write(card);
 
-    tarotCard.setId(3);
-    tarotCard.setName("La estrella");
-    tarotCard.setEffect(effectsArchive.read(2));
-    tarotCardsArchive.write(tarotCard);
+    card.setId(3);
+    card.setName("La estrella");
+    card.setEffect(effectsArchive.read(2));
+    cardsArchive.write(card);
 
-    tarotCard.setId(4);
-    tarotCard.setName("La emperatriz");
-    tarotCard.setEffect(effectsArchive.read(3));
-    tarotCardsArchive.write(tarotCard);
+    card.setId(4);
+    card.setName("La emperatriz");
+    card.setEffect(effectsArchive.read(3));
+    cardsArchive.write(card);
 
-    tarotCard.setId(5);
-    tarotCard.setName("El mago");
-    tarotCard.setEffect(effectsArchive.read(4));
-    tarotCardsArchive.write(tarotCard);
+    card.setId(5);
+    card.setName("El mago");
+    card.setEffect(effectsArchive.read(4));
+    cardsArchive.write(card);
 
-    tarotCard.setId(6);
-    tarotCard.setName("El sol");
-    tarotCard.setEffect(effectsArchive.read(5));
-    tarotCardsArchive.write(tarotCard);
+    card.setId(6);
+    card.setName("El sol");
+    card.setEffect(effectsArchive.read(5));
+    cardsArchive.write(card);
 }
 
 void generatePropheciesData()
@@ -138,6 +138,6 @@ void generateInitialData()
 {
     generateCrystalsData();
     generateEffectsData();
-    generateTarotCardsData();
+    generateCardsData();
     generatePropheciesData();
 }

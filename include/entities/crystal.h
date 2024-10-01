@@ -19,9 +19,7 @@ class Crystal
 
     private:
 
-    static const int SIZE = 30;
-
     int _id;
 
-    char _name[SIZE];
+    char _name[30];
 };

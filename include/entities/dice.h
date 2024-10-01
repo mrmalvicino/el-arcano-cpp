@@ -1,5 +1,7 @@
 #pragma once
 
+#include <iostream>
+#include <random>
 #include <stdexcept>
 
 class Dice
@@ -11,6 +13,8 @@ class Dice
     int getValue();
 
     void setValue(int value);
+
+    void roll(bool random = true);
 
     private:
 

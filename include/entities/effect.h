@@ -23,11 +23,9 @@ class Effect
 
     private:
 
-    static const int SIZE = 30;
-
     int _id;
 
-    char _name[SIZE];
+    char _name[30];
 
-    char _description[SIZE * 10];
+    char _description[300];
 };

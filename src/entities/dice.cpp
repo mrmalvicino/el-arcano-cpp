@@ -19,3 +19,19 @@ void Dice::setValue(int value)
 
     _value = value;
 }
+
+void Dice::roll(bool random)
+{
+    if(random == true)
+    {
+        std::random_device rd;
+        std::mt19937 gen(rd());
+        std::uniform_int_distribution<int> dist(1, SIDES);
+        _value = dist(gen);
+    }
+    else
+    {
+        std::cout << "Ingresar valor de dado:/n";
+        std::cin >> _value;
+    }
+}
