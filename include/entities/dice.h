@@ -1,8 +1,7 @@
 #pragma once
 
 #include <iostream>
-#include <random>
-#include <stdexcept>
+#include "../utils/math.h"
 
 class Dice
 {
@@ -18,7 +17,7 @@ class Dice
 
     private:
 
-    static const int SIDES = 8;
+    static const int _SIDES = 8;
 
     int _value;
 };

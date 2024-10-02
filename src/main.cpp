@@ -1,9 +1,16 @@
 #include <iostream>
-#include "./../data/initialData.h"
+#include "../data/initialData.h"
+#include "../include/entities/dice.h"
 
 int main()
 {
     generateInitialData();
+
+    Dice dice;
+    dice.roll();
+    std::cout << dice.getValue() << std::endl;
+    dice.roll();
+    std::cout << dice.getValue() << std::endl;
 
     while (false==true) // mientras la profecia del jugador actual no este cumplida
     {

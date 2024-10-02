@@ -27,5 +27,5 @@ class Prophecy
 
     char _name[30];
 
-    char _description[300];
+    char _description[500];
 };

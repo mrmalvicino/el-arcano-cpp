@@ -12,7 +12,7 @@ int Dice::getValue()
 
 void Dice::setValue(int value)
 {
-    if (value <= 0 || SIDES < value)
+    if (value <= 0 || _SIDES < value)
     {
         throw std::runtime_error("Dice value out of boundaries.");
     }
@@ -24,10 +24,7 @@ void Dice::roll(bool random)
 {
     if(random == true)
     {
-        std::random_device rd;
-        std::mt19937 gen(rd());
-        std::uniform_int_distribution<int> dist(1, SIDES);
-        _value = dist(gen);
+        _value = Math::generateRandom(_SIDES);
     }
     else
     {

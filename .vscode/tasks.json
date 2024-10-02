@@ -19,6 +19,7 @@
                 "-g",
                 "${fileDirname}/main.cpp",
                 "${fileDirname}/entities/*.cpp",
+                "${fileDirname}/utils/*.cpp",
                 "-o",
                 "${fileDirname}/../build/${fileBasenameNoExtension}",
                 "-framework",

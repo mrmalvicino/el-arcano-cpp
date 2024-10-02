@@ -24,7 +24,7 @@ class Player
 
     Prophecy _prophecy;
 
-    Card * _cards;
+    //Card * _cards;
 
-    Crystal * _crystals;
+    //Crystal * _crystals;
 };
